@@ -7,6 +7,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const SECRET = process.env.JWT_SECRET || 'J@fonso092007';
 const cors = require('cors');
+const path = require('path');
 
 app.use(cors({
   origin: function(origin, callback) {
@@ -747,6 +748,9 @@ app.get('/api/dashboard/desperdicio', authenticateToken, (req, res) => {
         });
     });
 });
+
+// Servir ficheiros estáticos do frontend
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(PORT, () => {
     console.log(`Servidor a correr em http://localhost:${PORT}`);

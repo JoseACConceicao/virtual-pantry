@@ -1,0 +1,172 @@
+body {
+    background: #f6f6f6;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+header {
+    padding: 2rem 0 1rem 0;
+    background-color: #E5E0D8;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Courier New', monospace;
+    position: relative;
+    z-index: 10;
+}
+
+header .logo {
+    margin-left: 2%;
+    margin-top: 1%;
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0.1px;
+    color: #748873;
+    text-decoration: none;
+    text-align: left;
+}
+
+header .navbar {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-top: 1.23%;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+header .navbar a {
+    text-decoration-line: underline;
+    color: #748873;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+header .account {
+    margin-left: 27%;
+    margin-top: 0.55%;
+    height: 20%;
+    text-align: center;
+    border: 1px solid #748873;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+.info-hero-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -10rem auto 0rem auto;
+    overflow: hidden;
+}
+
+.info-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.info-hero-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+.info-hero {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: none;
+    box-shadow: none;
+    color: #fff;
+    max-width: 600px;
+    width: 90vw;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.info-hero h1,
+.info-hero p,
+.info-hero .cta-btn,
+.info-hero .info-examples span {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    animation: fadeInInfo 1.2s ease-in forwards;
+}
+
+.info-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    letter-spacing: 1px;
+    animation-delay: 0.1s;
+}
+
+.info-hero p {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+    animation-delay: 0.3s;
+}
+
+.info-examples {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.example-card {
+    background: #F8F8F8;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(116, 136, 115, 0.06);
+    padding: 1rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.7rem 2rem;
+    border-radius: 25px;
+    background: #D1A980;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(45, 108, 223, 0.08);
+    animation-delay: 0.5s;
+}
+
+.cta-btn:hover {
+    background: #748873;
+}
+
+@keyframes fadeInInfo {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
