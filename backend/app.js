@@ -14,6 +14,8 @@ app.use(cors({
     if (!origin) return callback(null, true); // Permite requests sem origin (ex: Postman)
     if (
       origin.endsWith('.vercel.app') ||
+      origin.endsWith('.onrender.com') ||
+      origin === 'http://localhost:10000' ||
       origin === 'http://localhost:3000' ||
       origin === 'http://localhost:5000'
     ) {
@@ -23,7 +25,7 @@ app.use(cors({
   },
   credentials: true
 }));
-app.use(express.json({ limit: '50mb' })); // Aumentar limite para imagens
+app.use(express.json({ limit: '100mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 // Criação das tabelas se não existirem
