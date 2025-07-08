@@ -120,7 +120,7 @@ db.serialize(() => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Backend do Virtual Pantry está a funcionar!');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get('/test-db', (req, res) => {
@@ -751,6 +751,11 @@ app.get('/api/dashboard/desperdicio', authenticateToken, (req, res) => {
 
 // Servir ficheiros estáticos do frontend
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Fallback para SPA: qualquer rota não-API desconhecida serve index.html
+app.get(/^\/(?!api\/).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 app.listen(PORT, () => {
     console.log(`Servidor a correr em http://localhost:${PORT}`);
