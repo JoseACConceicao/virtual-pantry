@@ -130,7 +130,7 @@ app.get('/test-db', (req, res) => {
 });
 
 // Registo de utilizador
-app.post('/register', (req, res) => {
+app.post('/api/register', (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) return res.status(400).json({ error: 'Email e password são obrigatórios.' });
 
@@ -153,7 +153,7 @@ app.post('/register', (req, res) => {
 });
 
 // Login de utilizador
-app.post('/login', (req, res) => {
+app.post('/api/login', (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) return res.status(400).json({ error: 'Email e password são obrigatórios.' });
 
