@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Minha Despensa | The Virtual Pantry</title>
+    <link rel="icon" type="image/svg+xml" href="imagens/logo.svg">
+    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="style_dashboard.css">
+    <link rel="stylesheet" href="style_despensa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="dashboard.html">The Virtual Pantry</a>
+        <div class="navbar">
+            <a href="receitas.html">Receitas</a>
+            <a href="despensa.html">Despensa</a>
+            <a href="listas.html">Listas de compras</a>
+        </div>
+        <div class="account">
+            <a href="javascript:void(0)" id="account-btn">Conta</a>
+        </div>
+    </header>
+    <!-- Menu pop-up de conta -->
+    <div id="account-menu" class="account-menu" style="display:none;">
+        <div class="account-menu-content">
+            <div class="account-email" id="account-email">(email)</div>
+            <button class="account-change-password">Mudar password</button>
+            <button class="account-logout">Sair</button>
+        </div>
+    </div>
+    <main>
+        <section class="despensa-list dashboard-grid">
+            <a href="#" class="card card-link card-add-alimento">
+                <div class="card-icon"><i class="fa-solid fa-plus"></i></div>
+                <div class="card-title">Adicionar alimento</div>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <div class="instagram">
+            <a href="https://instagram.com/joseafonsocunhaconceicao/" target="_blank" rel="noopener">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p>&copy; 2025 The Virtual Pantry</p>
+        <a href="https://portfolio.co.tumo.world/p/7jovlzpn810e4m2q46d5e6mg2r3x54yw" target="_blank" rel="noopener">
+            <img src="imagens/tumo.svg" alt="Portfolio Tumo" class="icon-portfolio">
+        </a>
+    </footer>
+    <script src="modal_utils.js"></script>
+    <script src="account_menu.js"></script>
+    <script src="despensa.js"></script>
+</body>
+</html> 
